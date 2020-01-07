@@ -1,0 +1,34 @@
+<div>
+
+    <ul class="timeline" id="timeline">
+        <li class="li complete">
+            <div class="status"> 
+                <h4>TESTE</h4>
+            </div>
+        </li>
+        <li >
+            <div class="status"> 
+                <h4 style="visibility:hidden">TESTE</h4>
+            </div>
+        </li>
+        <li >
+            <div class="status"> 
+                <h4>TESTE</h4>
+            </div>
+        </li>
+        <li>
+            <div class="status"> 
+                <h4>TESTE</h4>
+            </div>
+        </li>
+    </ul>
+    
+    <ul class="timeline" id="timeline">
+        <li [ngClass]="getActualPosition(i)" *ngFor="let line of lines; let i= index">
+            <div class="status">
+                <h4 [style.visibility]="getVisibility(line)">{{ line}}</h4>
+            </div>
+        </li>
+        
+    </ul>
+</div>
